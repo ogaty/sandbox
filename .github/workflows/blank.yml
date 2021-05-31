@@ -35,7 +35,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Output file contents
         run: |
-          cat ./sample.txt
+          touch ./sample.txt
 
       - name: Upload file to S3
         env: 
