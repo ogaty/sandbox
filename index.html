@@ -1,1 +1,184 @@
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <script
+          src="https://code.jquery.com/jquery-3.6.1.min.js"
+          integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+          crossorigin="anonymous"></script>
 
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<style>
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+.close {
+  display: none;
+}
+details[open] {
+  background: #ccc;
+}
+a:any-link {
+  color: #ff0000;
+}
+</style>
+  <title></title>
+</head>
+<body>
+
+<a href="#xxx">xxxx</a>
+<div>
+  <input type="text" name="text" value="キャッチコピー" id="text1" class="close" width="120">
+  <img src="ok.png" alt="" id="ok" name="text" class="close" width="12">
+  <br>
+  <span name="text" id="text2" width="120">キャッチコピー</span>
+  <img src="pencil.png" alt="" id="pencil" name="text" width="12">
+
+  <div>
+    <span contenteditable="true">20</span>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <input type="range" value="75">
+  <br>
+  <input type="color" value="#ffcccc">
+  <br>
+  <label>
+    <input type="text" list="arealist">
+  </label>
+  <datalist id="arealist">
+    <option value="a1aaa1"></option>
+    <option value="a2aaa2"></option>
+    <option value="a3aaa3"></option>
+    <option value="a4aaa4"></option>
+    <option value="a5aaa5"></option>
+  </datalist>
+  <br>
+  <br>
+  <br>
+  <br>
+  <progress max="100" value="90">90%</progress>
+  <br>
+  <br>
+  <br>
+  <details>
+    <summary>
+      メニュー
+    </summary>
+    <div>
+      aaa<br>
+      bbb<br>
+      ccc
+    </div>
+  </details>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <dialog id="dialog">
+    <p>dialog</p>
+    <button onclick="document.getElementById('dialog').close()">close dialog</button>
+  </dialog>
+  <button onclick="document.getElementById('dialog').show()">open dialog</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 id="xxx" style="scroll-margin-top: 80px;">xxxx</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<script>
+  $(function() {
+    $("#text1").on("blur", function () {
+      $("#text2").text($(this).val());
+      $("[name=text]").toggleClass('close');
+    });
+    $("#pencil").on("click", function () {
+      $("[name=text]").toggleClass('close');
+    });
+  });
+</script>
+
+
+<script>
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+ ldirection: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+</body>
+</html>
