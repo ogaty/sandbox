@@ -25,8 +25,29 @@ details[open] {
 a:any-link {
   color: #ff0000;
 }
+#yyyy {
+  scroll-margin-top: 40px;
+}
 </style>
   <title></title>
+  <script>
+    var handleChange = function(event) {
+      var files = event.files;
+      const imageUrl = window.URL.createObjectURL(files[0]) //URL生成
+      let reader = new FileReader();
+      const imageUrl2 = reader.readAsDataURL(files[0]) //URL生成
+console.log(imageUrl) //データURLがコンソールに表示される
+      reader.onload = function(event) {
+        console.log(event);
+        var img = document.createElement("img");
+        img.src = event.target.result;
+        var root = document.querySelector("body");
+        root.appendChild(img);
+      }
+window.URL.revokeObjectURL(imageUrl) //URL破棄
+
+    }
+  </script>
 </head>
 <body>
 
@@ -41,7 +62,9 @@ a:any-link {
   <div>
     <span contenteditable="true">20</span>
   </div>
-  <br>
+  <div>
+    <a href="#yyyy">yyyy</a>
+  </div>
   <br>
   <br>
   <br>
@@ -108,9 +131,9 @@ a:any-link {
   <br>
   <br>
   <br>
+  <h3 id="yyyy">xxxx</h3>
   <br>
-  <br>
-  <br>
+  <input type="file" name="file" onchange="handleChange(this)">
   <br>
   <br>
   <br>
