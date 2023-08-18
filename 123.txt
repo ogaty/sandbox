@@ -1,7 +1,2 @@
 aaaa
 
-<a href="/aaa">aaa</a>
-<a href="/">aaa</a>
-<a href="/">aaa</a>
-<a href="/aaa">aaa</a>
-<a href="/">aaa</a>
